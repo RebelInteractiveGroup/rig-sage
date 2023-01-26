@@ -93,12 +93,12 @@ add_action('after_setup_theme', function () {
    */
   add_theme_support('post-thumbnails');
 
-  /**
-   * Enable responsive embed support.
-   *
-   * @link https://wordpress.org/gutenberg/handbook/designers-developers/developers/themes/theme-support/#responsive-embedded-content
-   */
-  add_theme_support('responsive-embeds');
+    /**
+     * Enable responsive embed support.
+     *
+     * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#responsive-embedded-content
+     */
+    add_theme_support('responsive-embeds');
 
   /**
    * Enable HTML5 markup support.
@@ -115,12 +115,12 @@ add_action('after_setup_theme', function () {
     'style',
   ]);
 
-  /**
-   * Enable selective refresh for widgets in customizer.
-   *
-   * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#theme-support-in-sidebars
-   */
-  add_theme_support('customize-selective-refresh-widgets');
+    /**
+     * Enable selective refresh for widgets in customizer.
+     *
+     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
+     */
+    add_theme_support('customize-selective-refresh-widgets');
 }, 20);
 
 /**

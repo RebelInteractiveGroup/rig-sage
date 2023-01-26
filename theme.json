@@ -11,6 +11,13 @@
       }
     },
     "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "duotone": [],
       "palette": [
         {
           "slug": "red",
@@ -48,6 +55,23 @@
     },
     "typography": {
       "customFontSize": false,
+      "fontFamilies": [
+        {
+          "name": "Ui-sans-serif",
+          "slug": "sans",
+          "fontFamily": "ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\""
+        },
+        {
+          "name": "Ui-serif",
+          "slug": "serif",
+          "fontFamily": "ui-serif,Georgia,Cambria,\"Times New Roman\",Times,serif"
+        },
+        {
+          "name": "Ui-monospace",
+          "slug": "mono",
+          "fontFamily": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace"
+        }
+      ],
       "fontSizes": [
         {
           "name": "Heading 1",
