@@ -54,7 +54,7 @@ try {
 |
 */
 
-collect(['setup', 'filters', 'gravityforms', 'pagination', 'blocks', 'actions'])
+collect(['actions', 'blocks', 'facetwp', 'filters', 'gravityforms', 'options', 'pagination', 'setup'])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(

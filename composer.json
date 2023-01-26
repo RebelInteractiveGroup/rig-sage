@@ -51,11 +51,22 @@
     },
     {
       "type": "vcs",
-      "url": "git@github.com:mwdelaney/google-tag-manager-snippets.git"
+      "url": "git@github.com:rebelinteractivegroup/rebel-branding.git"
+    },
+		{
+			"type": "vcs",
+			"url": "git@github.com:rebelinteractivegroup/gravityforms.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:rebelinteractivegroup/facetwp.git"
     }
   ],
   "require": {
-    "php": "^7.4|^8.0",
+    "php": ">=7.4|>=8.0",
+    "rebelinteractivegroup/rebel-branding": "*",
+    "rebelinteractivegroup/gravityforms": "*",
+    "rebelinteractivegroup/facetwp": "*",
     "garrettweinberg/sage-bootstrap5-navwalker": "*",
     "mwdelaney/sage-acf-gutenberg-blocks": "*",
     "mwdelaney/sage-acf-menu-icons": "*",
@@ -71,7 +82,8 @@
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/yoast-test-helper":"*",
     "wpackagist-plugin/redirection": "*",
-    "wpackagist-plugin/safe-svg": "*"
+    "wpackagist-plugin/safe-svg": "*",
+    "wpackagist-plugin/duplicate-post": "^4.5"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "3.7.1"

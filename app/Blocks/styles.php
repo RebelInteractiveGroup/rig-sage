@@ -6,17 +6,17 @@
  */
 
 register_block_style(
-    'create-block/container',
-    array(
-      'name'         => 'container-full',
-      'label'        => __('No Padding'),
-    )
+  'create-block/container',
+  array(
+    'name'         => 'container-full',
+    'label'        => __('No Padding'),
+  )
 );
 
 register_block_style(
-    'create-block/container',
-    array(
-      'name'         => 'half-padding',
-      'label'        => __('Half Padding'),
-    )
+  'create-block/container',
+  array(
+    'name'         => 'half-padding',
+    'label'        => __('Half Padding'),
+  )
 );

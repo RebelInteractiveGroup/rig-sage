@@ -13,14 +13,14 @@
     "color": {
       "palette": [
         {
-          "slug": "cnc-red",
+          "slug": "red",
           "color": "#D11141",
-          "name": "CNC Red"
+          "name": "Red"
         },
         {
-          "slug": "cnc-black",
+          "slug": "black",
           "color": "#111111",
-          "name": "CNC Black"
+          "name": "Black"
         }
       ],
       "custom": false,
@@ -72,12 +72,12 @@
         {
           "name": "Primary Navigation",
           "size": "1rem",
-          "slug": "primary-navigation-font-size"
+          "slug": "primary-nav-font-size"
         },
         {
           "name": "Utility Navigation",
           "size": "0.75rem",
-          "slug": "utility-navigation-font-size"
+          "slug": "utility-nav-font-size"
         },
         {
           "name": "CTA",
