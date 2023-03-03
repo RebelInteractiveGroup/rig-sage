@@ -40,13 +40,13 @@ export default async (app) => {
      * Development origin
      * @see {@link https://bud.js.org/docs/bud.serve/}
      */
-    .serve('http://localhost:3000')
+    .serve('http://0.0.0.0:3000')
 
     /**
      * URI of the `public` directory
      * @see {@link https://bud.js.org/docs/bud.setPublicPath/}
      */
-    .setPublicPath('/app/themes/sage/public/')
+    .setPublicPath('/app/themes/rig-sage/public/')
 
     /**
      * Generate WordPress `theme.json`
@@ -81,8 +81,5 @@ export default async (app) => {
         customFontSize: false,
       },
     })
-    .useTailwindColors()
-    .useTailwindFontFamily()
-    .useTailwindFontSize()
     .enable();
 };

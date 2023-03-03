@@ -36,17 +36,6 @@ if (class_exists('GFCommon')) {
   //     $role->add_cap('gform_full_access'); // To disable use: $role->remove_cap.
   // });
 
-  /** Place Gravityforms jQuery In Footer. */
-  add_filter('gform_cdata_open', function ($content = '') {
-    $content = 'document.addEventListener("DOMContentLoaded", function() { ';
-    return $content;
-  });
-  add_filter('gform_cdata_close', function ($content = '') {
-    $content = ' }, false);';
-    return $content;
-  });
-  add_filter('gform_init_scripts_footer', '__return_true');
-
   /** Add .form-group to .gfield. */
   add_filter('gform_field_css_class', function ($classes, $field, $form) {
     $classes .= ' form-group';
@@ -80,6 +69,9 @@ if (class_exists('GFCommon')) {
       $content = str_replace('class=\'medium', 'class=\'form-control', $content);
       $content = str_replace('class=\'large', 'class=\'form-control form-control-lg', $content);
     }
+
+    // Labels
+    $content = str_replace('gfield_label', 'form-label gfield_label', $content);
 
     // Descriptions
     $content = str_replace('gfield_description', 'gfield_description small', $content);
@@ -246,6 +238,12 @@ if (class_exists('GFCommon')) {
     $button = str_replace('class=\'gform_previous_button', 'class=\'gform_previous_button btn btn-outline-secondary', $button);
     return $button;
   }, 10, 2);
+
+    /** Change classes on Save & Continue Later button. */
+    add_filter('gform_savecontinue_link', function ($button, $form) {
+        $button = str_replace('class=\'gform_save_link', 'class=\'btn btn-outline-secondary gform_save_link', $button);
+        return $button;
+    }, 10, 2);
 
   /** Change classes on progressbars */
   add_filter('gform_progress_bar', function ($progress_bar, $form, $confirmation_message) {

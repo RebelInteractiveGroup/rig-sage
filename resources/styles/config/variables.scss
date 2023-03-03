@@ -62,12 +62,12 @@ $lead-font-size: $font-size-base * 1.5; //24px
 $lead-font-weight: 500;
 
 //Input & Button
+$input-btn-font-family: $font-family-base;
+$input-btn-font-size: $font-size-base;
 $input-btn-padding-y: $spacer * 0.8;
 $input-btn-padding-x: 0.75rem !default;
 
 // Button
-$input-btn-font-family: $font-family-base;
-$input-btn-font-size: $font-size-base;
 $btn-border-width: 2px;
 $btn-width: $spacer * 14;
 $btn-font-weight: 600;
