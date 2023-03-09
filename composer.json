@@ -48,25 +48,10 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:rebelinteractivegroup/rebel-branding.git"
-    },
-		{
-			"type": "vcs",
-			"url": "git@github.com:rebelinteractivegroup/gravityforms.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:rebelinteractivegroup/facetwp.git"
     }
   ],
   "require": {
     "php": "^8.0",
-    "rebelinteractivegroup/rebel-branding": "*",
-    "rebelinteractivegroup/gravityforms": "2.6.8.1",
-    "rebelinteractivegroup/facetwp": "4.1",
     "garrettweinberg/sage-bootstrap5-navwalker": "*",
     "mwdelaney/sage-acf-gutenberg-blocks": "*",
     "mwdelaney/sage-acf-menu-icons": "*",
@@ -74,15 +59,7 @@
     "mwdelaney/sage-fonts-preload": "*",
     "mwdelaney/sage-wp-nav-submenu": "*",
     "mwdelaney/google-tag-manager-snippets": "*",
-    "mwdelaney/add-sitemap-to-robots": "*",
-    "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
-    "wpackagist-plugin/resmushit-image-optimizer": "*",
-    "wpackagist-plugin/regenerate-thumbnails": "*",
-    "wpackagist-plugin/disable-comments": "*",
-    "wpackagist-plugin/wordpress-seo": "*",
-    "wpackagist-plugin/yoast-test-helper":"*",
-    "wpackagist-plugin/redirection": "*",
-    "wpackagist-plugin/safe-svg": "*"
+    "mwdelaney/add-sitemap-to-robots": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "3.7.1"
