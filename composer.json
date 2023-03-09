@@ -43,13 +43,6 @@
       "App\\": "app/"
     }
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org",
-      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
-    }
-  ],
   "require": {
     "php": "^8.0",
     "garrettweinberg/sage-bootstrap5-navwalker": "*",
@@ -71,11 +64,6 @@
   "config": {
     "optimize-autoloader": true,
     "preferred-install": "dist",
-    "allow-plugins": {
-      "composer/installers": true,
-      "roots/wordpress-core-installer": true,
-      "ffraenz/private-composer-installer": true
-    },
     "sort-packages": true
   },
   "minimum-stability": "dev",
@@ -86,10 +74,6 @@
     ]
   },
   "extra": {
-    "installer-paths": {
-      "../../mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "../../plugins/{$name}/": ["type:wordpress-plugin"]
-    },
     "acorn": {
       "providers": [
         "App\\Providers\\ThemeServiceProvider"
