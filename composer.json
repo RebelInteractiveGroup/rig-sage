@@ -50,9 +50,7 @@
     "mwdelaney/sage-acf-menu-icons": "*",
     "mwdelaney/sage-advanced-custom-fields": "*",
     "mwdelaney/sage-fonts-preload": "*",
-    "mwdelaney/sage-wp-nav-submenu": "*",
-    "mwdelaney/google-tag-manager-snippets": "*",
-    "mwdelaney/add-sitemap-to-robots": "*"
+    "mwdelaney/sage-wp-nav-submenu": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "3.7.1"
