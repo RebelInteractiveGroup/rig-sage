@@ -3,8 +3,8 @@
 namespace App;
 
 collect([
-  'Styles',
-  'Templates',
+  'styles',
+  'templates',
 ])->each(function ($file) {
   $file = "app/Blocks/{$file}.php";
 
