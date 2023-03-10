@@ -6,7 +6,10 @@ import 'bootstrap';
  * Application entrypoint
  */
 domReady(async () => {
-  // ...
+  const burger = document.getElementById('hamburger-menu-item');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('is-active');
+  });
 });
 
 /**
