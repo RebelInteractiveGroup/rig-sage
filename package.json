@@ -20,8 +20,16 @@
   },
   "devDependencies": {
     "@roots/bud": "6.12.0",
-    "@roots/bud-tailwindcss": "6.12.0",
+    "@roots/bud-sass": "6.12.0",
     "@roots/sage": "6.12.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "eslint": "^8.32.0",
+    "hamburgers": "^1.2.1",
+    "prettier": "^2.8.3",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard-scss": "^6.1.0"
+  }
 }
