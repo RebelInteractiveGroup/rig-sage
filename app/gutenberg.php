@@ -3,9 +3,10 @@
 namespace App;
 
 collect([
+  'Styles',
   'Templates',
 ])->each(function ($file) {
-    $file = "app/FacetWP/{$file}.php";
+    $file = "app/Gutenberg/{$file}.php";
 
     if (!locate_template($file, true, true)) {
         wp_die(

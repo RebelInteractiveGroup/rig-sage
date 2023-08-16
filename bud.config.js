@@ -48,6 +48,34 @@ export default async (app) => {
   app.wpjson
     .set('settings.color.custom', false)
     .set('settings.color.customDuotone', false)
+    .set('settings.color.palette',
+      [
+          {
+            "slug": "primary",
+            "color": "#0074d9",
+            "name": "Primary"
+          },
+          {
+            "slug": "secondary",
+            "color": "#aa41e6",
+            "name": "Secondary"
+          },
+          {
+            "slug": "danger",
+            "color": "#ff4136",
+            "name": "Danger"
+          },
+          {
+            "slug": "periwinkle",
+            "color": "#eaedf6",
+            "name": "Periwinkle"
+          },
+          {
+            "slug": "dark-blue",
+            "color": "#263b77",
+            "name": "Dark Blue"
+          }
+      ])
     .set('settings.color.customGradient', false)
     .set('settings.color.defaultDuotone', false)
     .set('settings.color.defaultGradients', false)
