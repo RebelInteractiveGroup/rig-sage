@@ -76,12 +76,12 @@ $font-family-base: $font-family-sans-serif;
 $font-family-code: $font-family-monospace;
 
 // Heading Sizes
-$h1-font-size: $font-size-base * 3; //48px
-$h2-font-size: $font-size-base * 1.25; //20px
-$h3-font-size: $font-size-base * 1.5; //24px
-$h4-font-size: $font-size-base * 2.25; //36px
-$h5-font-size: $font-size-base * 1.125; //18px
-$h6-font-size: $font-size-base * 1; //16px
+$h1-font-size: rfs-fluid-value($font-size-base * 3); //48px
+$h2-font-size: rfs-fluid-value($font-size-base * 1.25); //20px
+$h3-font-size: rfs-fluid-value($font-size-base * 1.5); //24px
+$h4-font-size: rfs-fluid-value($font-size-base * 2.25); //36px
+$h5-font-size: rfs-fluid-value($font-size-base * 1.125); //18px
+$h6-font-size: rfs-fluid-value($font-size-base * 1); //16px
 
 // Headings Styles
 $heading-font-family: $font-family-base;
