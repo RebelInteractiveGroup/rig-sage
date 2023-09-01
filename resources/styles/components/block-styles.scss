@@ -5,11 +5,3 @@
 .is-style-container-group {
   @extend .container;
 }
-
-.is-style-vertical-stack {
-  @extend .vstack;
-}
-
-.is-style-horizontal-stack {
-  @extend .hstack;
-}

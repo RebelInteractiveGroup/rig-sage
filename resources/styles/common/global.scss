@@ -11,11 +11,44 @@
     background-color: $value;
   }
 
-  .bg-#{$color} {
-    background-color: $value;
-  }
-
-  .contrast-#{$color} {
+  .#{$color}-contrasting {
     color: color-contrast($value);
+  }
+}
+
+$color-mode-type: data;
+
+@include color-mode(dark) {
+  .element {
+    color: var(--bs-primary-text-emphasis);
+    background-color: var(--bs-primary-bg-subtle);
+  }
+}
+
+@mixin color-mode($mode: light, $root: false) {
+  @if $color-mode-type == "media-query" {
+    @if $root == true {
+      @media (prefers-color-scheme: $mode) {
+        :root {
+          @content;
+        }
+      }
+    } @else {
+      @media (prefers-color-scheme: $mode) {
+        @content;
+      }
+    }
+  } @else {
+    [data-bs-theme="#{$mode}"] {
+      @content;
+    }
+  }
+}
+
+a {
+  &:focus, &:focus-visible {
+    border: 2px solid white !important;
+    outline: black solid 2px !important;
+    outline-offset: 2px !important;
   }
 }
