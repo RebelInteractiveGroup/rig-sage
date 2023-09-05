@@ -16,11 +16,17 @@ $theme-colors: (
 );
 $custom-colors: (
   'periwinkle': #eaedf6,
-  'dark-blue' : #263b77,
-  'light-gray' : #f7f7f7
+  'darkblue' : #263b77,
+  'lightgray' : #f7f7f7
 );
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
+
+// :export {
+//   @each $key, $value in $theme-colors {
+//     #{unquote($key)}: $value;
+//   }
+// }
 
 /**
  * Bootstrap Options

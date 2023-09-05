@@ -1,3 +1,5 @@
+// import styles from './resources/styles/common/global.scss'
+
 /**
  * Compiler configuration
  *
@@ -53,18 +55,18 @@ export default async (app) => {
     .set('settings.color.defaultGradients', false)
     .set('settings.color.defaultPalette', false)
     .set('settings.color.duotone', [])
-      .set('settings.color.palette', [
-        {
-          'name': 'Green',
-          'slug': 'primary',
-          'color': '#009879'
-        },
-        {
-          'name': 'Blue',
-          'slug': 'secondary',
-          'color': '#0093C8'
-        }
-        ])
+    .set('settings.color.palette', [
+      {
+        'name': 'Green',
+        'slug': 'primary',
+        'color': '#009879'
+      },
+      {
+        'name': 'Blue',
+        'slug': 'secondary',
+        'color': '#0093C8'
+      }
+    ])
     .set('settings.custom.spacing', {})
     .set('settings.custom.typography.font-size', {})
     .set('settings.custom.typography.line-height', {})
