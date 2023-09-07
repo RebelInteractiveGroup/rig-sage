@@ -48,7 +48,9 @@
     "garrettweinberg/sage-bootstrap5-navwalker": "*"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "3.7.1"
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+		"squizlabs/php_codesniffer": "^3.6",
+		"wp-coding-standards/wpcs": "^2.3"
   },
   "suggest": {
     "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0).",
@@ -57,14 +59,15 @@
   "config": {
     "optimize-autoloader": true,
     "preferred-install": "dist",
-    "sort-packages": true
+    "sort-packages": true,
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "scripts": {
-    "lint": [
-      "phpcs --extensions=php --standard=PSR12 app"
-    ]
+		"lint": "./vendor/bin/phpcs --standard=phpcs.xml"
   },
   "extra": {
     "acorn": {

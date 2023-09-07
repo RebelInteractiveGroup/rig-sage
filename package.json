@@ -7,8 +7,11 @@
   "engines": {
     "node": ">=16.0.0"
   },
+  "prettier": "@wordpress/prettier-config",
   "type": "module",
   "scripts": {
+    "dev:blocks": "wp-scripts start --webpack-copy-php --webpack-src-dir=app/Blocks",
+    "build:blocks": "wp-scripts build --webpack-copy-php --webpack-src-dir=./app/Blocks --output-path=./app/Blocks",
     "dev": "bud dev",
     "build": "bud build",
     "translate": "yarn translate:pot && yarn translate:update",
@@ -22,7 +25,10 @@
     "@roots/bud": "6.12.2",
     "@roots/bud-sass": "6.12.2",
     "@roots/bud-support": "6.12.2",
-    "@roots/sage": "6.12.2"
+    "@roots/sage": "6.12.2",
+    "@wordpress/scripts": "^25.5.1",
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",

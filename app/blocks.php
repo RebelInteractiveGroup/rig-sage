@@ -4,8 +4,7 @@ namespace App;
 
 collect(
     [
-    'NavigationDropdown',
-    'RecipeCard',
+    'DynamicBlock/index',
     'Styles',
     'Templates',
     ]

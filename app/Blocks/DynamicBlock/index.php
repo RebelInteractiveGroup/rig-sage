@@ -13,14 +13,18 @@
  * Registers all block assets so that they can be enqueued through Gutenberg in
  * the corresponding context.
  */
-function rig_sage_dynamic_block_block_init()
-{
+add_action('init', function () {
     register_block_type(
         __DIR__,
-        ['render_callback' => 'rig_sage_dynamic_block_render_callback'],
+        ['render_callback' => function ($attributes, $content, $block_instance) {
+            ob_start();
+
+            include plugin_dir_path(__FILE__) . 'template.php';
+
+            return ob_get_clean();
+        }],
     );
-}
-add_action('init', 'rig_sage_dynamic_block_block_init');
+});
 
 
 /**
@@ -32,17 +36,4 @@ add_action('init', 'rig_sage_dynamic_block_block_init');
  * @param WP_Block $block_instance The instance of the WP_Block class that represents
  *                 the block being rendered.
  */
-function rig_sage_dynamic_block_render_callback($attributes, $content, $block_instance)
-{
-    ob_start();
 
-    /**
-     * Keeping the markup to be returned in a separate file is sometimes better,
-     * especially if there is very complicated markup.
-     * All of passed parameters are still accessible in the file.
-     */
-
-    include plugin_dir_path(__FILE__) . 'DynamicBlock/template.php';
-
-    return ob_get_clean();
-}

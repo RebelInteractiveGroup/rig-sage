@@ -12,7 +12,11 @@
 ?>
 <p <?php echo wp_kses_data(get_block_wrapper_attributes()); ?>>
     <?php
-    if (isset($attributes['message']) ) {
+    print_r($attributes);
+    print_r($content);
+    print_r($block_instance);
+
+    if (isset($attributes['message'])) {
         /**
          * The wp_kses_post function is used to ensure any HTML that is not allowed in a post will be escaped.
          *
