@@ -32,17 +32,6 @@ add_action('enqueue_block_editor_assets', function () {
  * @return void
  */
 add_action('after_setup_theme', function () {
-  /**
-   * Enable features from the Soil plugin if activated.
-   *
-   * @link https://roots.io/plugins/soil/
-   */
-  add_theme_support('soil', [
-    'clean-up',
-    'nav-walker',
-    'nice-search',
-    'relative-urls',
-  ]);
 
   /**
    * Disable full-site editing support.
@@ -83,12 +72,12 @@ add_action('after_setup_theme', function () {
    */
   add_theme_support('post-thumbnails');
 
-    /**
-     * Enable responsive embed support.
-     *
-     * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#responsive-embedded-content
-     */
-    add_theme_support('responsive-embeds');
+  /**
+   * Enable responsive embed support.
+   *
+   * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#responsive-embedded-content
+   */
+  add_theme_support('responsive-embeds');
 
   /**
    * Enable HTML5 markup support.
@@ -105,12 +94,12 @@ add_action('after_setup_theme', function () {
     'style',
   ]);
 
-    /**
-     * Enable selective refresh for widgets in customizer.
-     *
-     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
-     */
-    add_theme_support('customize-selective-refresh-widgets');
+  /**
+   * Enable selective refresh for widgets in customizer.
+   *
+   * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
+   */
+  add_theme_support('customize-selective-refresh-widgets');
 }, 20);
 
 /**
