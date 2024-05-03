@@ -3,9 +3,11 @@
   @extend .mx-auto, .align-items-center, .justify-content-center;
 
   text-align: center;
+
   .page-item {
     border-radius: 0;
   }
+
   .page-link {
     font-size: 1.25rem;
     position: relative;
@@ -26,7 +28,7 @@
       border-radius: 0!important;
     }
 
-    &.prev, 
+    &.prev,
     &.next {
       font-size: 3rem;
       line-height: 3rem;

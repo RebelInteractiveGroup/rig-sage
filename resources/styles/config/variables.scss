@@ -5,6 +5,8 @@
 $primary: #0074d9;
 $secondary: #aa41e6;
 $danger: #ff4136;
+$black: #000;
+$white: #fff;
 
 // Colors
 $theme-colors: (
@@ -14,74 +16,138 @@ $theme-colors: (
 );
 $custom-colors: (
   'periwinkle': #eaedf6,
-  'dark-blue' : #263b77,
-  'light-gray' : #f7f7f7
+  'darkblue' : #263b77,
+  'lightgray' : #f7f7f7
 );
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
-// Shadows
-$shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+// :export {
+//   @each $key, $value in $theme-colors {
+//     #{unquote($key)}: $value;
+//   }
+// }
 
-// Gradients
+/**
+ * Bootstrap Options
+ */
+
+/* Shadows */
+$enable-shadows: true;
+
+/* Gradients */
 $enable-gradients: true;
-$gradient: linear-gradient(180deg, rgba(map-get($theme-colors, 'primary'), 0.15), rgba(map-get($theme-colors, 'secondary'), 0));
+
+/* Rounded */
+$enable-rounded: true;
+
+/* Dark Mode */
+$enable-dark-mode: true;
+
+$enable-transitions: true;
+
+$enable-reduced-motion: true;
+$enable-grid-classes: true;
+$enable-container-classes: true;
+$enable-caret: true;
+$enable-button-pointers: true;
+$enable-rfs: true;
+$enable-validation-icons: true;
+$enable-negative-margins: false;
+$enable-deprecation-messages: true;
+$enable-important-utilities: true;
+$enable-smooth-scroll: true;
 
 // Global Variables
-$link-color: map-get($theme-colors, 'primary');
-$link-hover-decoration: none;
 $spacer: 1rem;
-$border-radius: 0;
+$link-color: $primary;
+$link-hover-decoration: none;
 
-$transition-base: all 0.2s ease-in-out;
+/* Focus */
+$focus-ring-width: $spacer * .25;
+$focus-ring-opacity: .25;
+$focus-ring-color: rgba($primary, $focus-ring-opacity);
+$focus-ring-blur: 0;
+$focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
 
 // Typography
-$font-size-base: 1rem !default;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+$font-weight-normal: 400;
 
 // Fonts
-$font-family-sans-serif: helvetica, sans-serif;
-$font-family-condensed: 'Roboto Condensed', sans-serif;
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
-$heading-font-family: 'Nunito', serif;
+$font-family-code: $font-family-monospace;
 
 // Heading Sizes
-$h1-font-size: $font-size-base * 3; //48px
-$h2-font-size: $font-size-base * 1.25; //20px
-$h3-font-size: $font-size-base * 1.5; //24px
-$h4-font-size: $font-size-base * 2.25; //36px
-$h5-font-size: $font-size-base * 1.125; //18px
-$h6-font-size: $font-size-base * 1; //16px
+$h1-font-size: rfs-fluid-value($font-size-base * 3); //48px
+$h2-font-size: rfs-fluid-value($font-size-base * 1.25); //20px
+$h3-font-size: rfs-fluid-value($font-size-base * 1.5); //24px
+$h4-font-size: rfs-fluid-value($font-size-base * 2.25); //36px
+$h5-font-size: rfs-fluid-value($font-size-base * 1.125); //18px
+$h6-font-size: rfs-fluid-value($font-size-base * 1); //16px
 
 // Headings Styles
-$headings-margin-bottom: calc($spacer / 2) !default;
-$headings-font-family: $font-family-base;
-$headings-line-height: 1.8;
+$heading-font-family: $font-family-base;
+$headings-margin-bottom: $spacer * .5;
+$headings-font-family: null;
+$headings-font-style: null;
+$headings-font-weight: 500;
+$headings-line-height: $spacer * 1.2;
+$headings-color: inherit;
 
 // Intro Copy - Leads
 $lead-font-size: $font-size-base * 1.5; //24px
 $lead-font-weight: 500;
 
 //Input & Button
-$input-btn-font-family: $font-family-base;
+$input-btn-padding-y: $spacer * .375;
+$input-btn-padding-x: $spacer * .75;
+$input-btn-font-family: null;
 $input-btn-font-size: $font-size-base;
-$input-btn-padding-y: $spacer * 0.8;
-$input-btn-padding-x: 0.75rem !default;
+$input-btn-line-height: $line-height-base;
 
-// Button
-$btn-border-width: 2px;
-$btn-width: $spacer * 14;
-$btn-font-weight: 600;
-$btn-font-size: 1rem !important;
-$btn-link-hover-color: map-get($theme-colors, 'grey-700');
-$btn-border-radius: 0;
-$btn-border-radius-sm: 0;
-$btn-border-radius-lg: 0;
+$input-btn-focus-width: $focus-ring-width;
+$input-btn-focus-color-opacity: $focus-ring-opacity;
+$input-btn-focus-color: $focus-ring-color;
+$input-btn-focus-blur: $focus-ring-blur;
+$input-btn-focus-box-shadow: $focus-ring-box-shadow;
+
+$btn-padding-y: $input-btn-padding-y;
+$btn-padding-x: $input-btn-padding-x;
+$btn-font-family: $input-btn-font-family;
+$btn-font-size: $input-btn-font-size;
+$btn-line-height: $input-btn-line-height;
+$btn-white-space: null; // Set to `nowrap` to prevent text wrapping
+
+$btn-font-weight: $font-weight-normal;
+$btn-box-shadow: inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
+$btn-focus-width: $input-btn-focus-width;
+$btn-focus-box-shadow: $input-btn-focus-box-shadow;
+$btn-disabled-opacity: .65;
+$btn-active-box-shadow: inset 0 3px 5px rgba($black, .125);
+
+// Allows for customizing button radius independently from global border radius
+$border-radius: $spacer * .375;
+
+$btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+$btn-hover-bg-shade-amount: 15%;
+$btn-hover-bg-tint-amount: 15%;
+$btn-hover-border-shade-amount: 20%;
+$btn-hover-border-tint-amount: 10%;
+$btn-active-bg-shade-amount: 20%;
+$btn-active-bg-tint-amount: 20%;
+$btn-active-border-shade-amount: 25%;
+$btn-active-border-tint-amount: 10%;
 
 // Navigation
 $hamburger-padding-x: 0;
 $hamburger-padding-y: 0;
 $hamburger-layer-width: $spacer * 1.5;
-$hamburger-layer-height: $spacer * 0.175;
-$hamburger-layer-spacing: $spacer * 0.25;
-$hamburger-layer-color: map-get($theme-colors, 'primary');
+$hamburger-layer-height: $spacer * .175;
+$hamburger-layer-spacing: $spacer * .25;
+$hamburger-layer-color: $primary;
 $hamburger-types: (spin, arrow);

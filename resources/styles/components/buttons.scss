@@ -2,8 +2,7 @@
  * Buttons
  */
 
-@each $color-name,
-$color-value in $theme-colors {
+@each $color-name, $color-value in $theme-colors {
   .btn-#{$color-name} {
     @include button-variant($color-value, $color-value);
   }

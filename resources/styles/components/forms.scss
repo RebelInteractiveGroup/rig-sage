@@ -1,0 +1,241 @@
+/**
+ * Gravity Forms Bootstrap styling
+ * https://github.com/MoshCat/bootstrap-gravityforms
+ *
+ * Gravity Forms SASS styles for use in your Bootstrap enabled WordPress theme.
+ * Please use these styles together with bootstrap-gravityforms-hooks for full functionality:
+ * https://github.com/MoshCat/bootstrap-gravityforms-hooks
+ *
+ */
+
+@import 'partials/labels-descriptions';
+@import 'partials/fields-standard';
+@import 'partials/fields-advanced';
+@import 'partials/chosen';
+@import 'partials/datepicker';
+
+.gform_wrapper {
+  margin-bottom: $spacer;
+  text-align: left;
+
+  .gform_button {
+    @extend .btn, .btn-primary;
+
+    &:hover {
+      // @extend .bg-dark;
+    }
+  }
+
+  /* Layout
+    -------------------------------------------------------------- */
+  .gform_fields {
+    @extend .row;
+    @extend .g-3;
+
+    .gfield {
+      @include make-col-ready();
+      @extend .mb-3;
+    }
+    .gfield--width-quarter {
+      @include media-breakpoint-up(sm) {
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col(3);
+      }
+    }
+
+    .gfield--width-third {
+      @include media-breakpoint-up(md) {
+        @include make-col(4);
+      }
+    }
+    .gfield--width-five-twelfths {
+      @include media-breakpoint-up(md) {
+        @include make-col(5);
+      }
+    }
+    .gfield--width-half {
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
+    }
+    .gfield--width-seven-twelfths {
+      @include media-breakpoint-up(md) {
+        @include make-col(7);
+      }
+    }
+    .gfield--width-two-thirds {
+      @include media-breakpoint-up(md) {
+        @include make-col(8);
+      }
+    }
+    .gfield--width-three-quarter {
+      @include media-breakpoint-up(md) {
+        @include make-col(9);
+      }
+    }
+    .gfield--width-five-sixths {
+      @include media-breakpoint-up(md) {
+        @include make-col(10);
+      }
+    }
+    .gfield--width-eleven-twelfths {
+      @include media-breakpoint-up(md) {
+        @include make-col(11);
+      }
+    }
+    .gfield--width-full {
+      @include media-breakpoint-up(md) {
+        @include make-col(12);
+      }
+    }
+    .gsection {
+    }
+  }
+
+  /* Heading
+    -------------------------------------------------------------- */
+  .gform_heading {
+    .gform_description {
+      display: block;
+      margin-bottom: $paragraph-margin-bottom;
+    }
+
+    .gform_required_legend {
+      @extend .text-end, .fw-bold;
+    }
+  }
+
+  .gform_body {
+    margin-bottom: 1rem;
+  }
+
+  // Custom Ajax Spinner.
+  @keyframes ajax-spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .gform_ajax_spinner {
+    @extend .spinner-border, .spinner-border-sm;
+
+    color: $primary;
+    margin-left: 1rem;
+  }
+
+  .gform_validation_container, // anti-spam honeypot
+  .gform_hidden {
+    @extend .visually-hidden;
+  }
+
+  .gfield_required {
+    color: $danger;
+  }
+
+  .gform_validation_errors {
+    @extend .alert;
+
+    font-size: $font-size-sm;
+
+    .gform_submission_error {
+      font-size: $font-size-sm;
+    }
+
+    ol {
+      margin: 0;
+    }
+
+    .gform_validation_error_link {
+      @extend .alert-link;
+
+      font-weight: normal;
+    }
+  }
+
+  select[aria-invalid='true'],
+  textarea[aria-invalid='true'],
+  input[aria-invalid='true'] {
+    border-color: rgba($form-feedback-invalid-color, 0.5);
+  }
+}
+
+/* Widget
+-------------------------------------------------------------- */
+.gform_widget {
+  textarea,
+  input[type='text'],
+  input[type='email'],
+  input[type='url'],
+  input[type='search'],
+  input[type='number'],
+  input[type='tel'] {
+    @extend .form-control-sm;
+  }
+}
+
+/* Reset :disabled when viewing the form with shortcode preview
+-------------------------------------------------------------- */
+.mce-content-body {
+  .form-control,
+  .form-select {
+    &:disabled {
+      background-color: $input-bg;
+    }
+  }
+}
+
+/* Confirmation
+-------------------------------------------------------------- */
+.gform_confirmation_wrapper {
+  @extend .alert;
+  @extend .alert-secondary;
+}
+
+.gform_wrapper {
+  .gform_validation_errors {
+    ol {
+      @extend .bg-white, .text-black;
+    }
+  }
+
+  .gfield_validation_message {
+   @extend .text-danger;
+
+    width: fit-content;
+  }
+
+  .gfield_required {
+   @extend .text-danger;
+  }
+
+  .gform_title {
+    @extend .text-white, .fs-4;
+  }
+}
+
+.form-control:focus, .gform_button:focus {
+  border: 3px solid #0087e9 !important;
+}
+
+.gform_fileupload_rules {
+  @extend .d-none;
+}
+
+.gform_delete_file {
+  &:focus {
+    border: 3px solid #0087e9 !important;
+  }
+
+  .dashicons-trash {
+    @extend .text-danger;
+  }
+}
+
+.gfield_label:not([for]) {
+  @extend .d-none;
+}

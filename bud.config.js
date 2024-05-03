@@ -1,3 +1,5 @@
+// import styles from './resources/styles/common/global.scss'
+
 /**
  * Compiler configuration
  *

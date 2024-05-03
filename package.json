@@ -7,8 +7,11 @@
   "engines": {
     "node": ">=20.0.0"
   },
+  "prettier": "@wordpress/prettier-config",
   "type": "module",
   "scripts": {
+    "dev:blocks": "wp-scripts start --webpack-copy-php --webpack-src-dir=app/Blocks",
+    "build:blocks": "wp-scripts build --webpack-copy-php --webpack-src-dir=./app/Blocks --output-path=./app/Blocks",
     "dev": "bud dev",
     "build": "bud build",
     "translate": "npm run translate:pot && npm run translate:update",
