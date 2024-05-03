@@ -3,7 +3,7 @@
 namespace App;
 
 collect([
-  'templates',
+  'Templates',
 ])->each(function ($file) {
   $file = "app/FacetWP/{$file}.php";
 
