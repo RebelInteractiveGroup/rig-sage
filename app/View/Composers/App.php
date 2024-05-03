@@ -27,6 +27,9 @@ class App extends Composer
       'primaryMenu' => $this->primaryMenu(),
       'utilityMenu' => $this->utilityMenu(),
       'footerMenu' => $this->footerMenu(),
+      'headerBGImage' => $this->headerVideoFileBG(),
+      'headerBGVideoFile' => $this->headerVideoFileBG(),
+      'headerBGVideoEmbed' => $this->headerVideoEmbeddedBG(),
     ];
   }
 
@@ -83,4 +86,49 @@ class App extends Composer
     ];
     return $args;
   }
+
+  /**
+   * Return the embedded video for the page
+   *
+   * @return string
+   */
+  public function headerVideoEmbeddedBG()
+  {
+      $return = '';
+      if (get_field('header_video')) {
+          // get iframe HTML
+          $iframe = get_field('header_video');
+
+          // use preg_match to find iframe src
+          preg_match('/src="(.+?)"/', $iframe, $matches);
+          $src = $matches[1];
+
+          $new_src = add_query_arg(['background' => 1], $src);
+          $return = str_replace($src, $new_src, $iframe);
+      }
+
+      // Always return
+      return $return;
+  }
+
+  /**
+   * Return the header video file for the page
+   *
+   * @return string
+   */
+  public function headerVideoFileBG()
+  {
+      $return = '';
+      if (get_field('header_video_file')) {
+          // get iframe HTML
+          $mp4URL = get_field('header_video_file');
+
+          $video_element = '<video preload="auto" autoplay="autoplay" loop="loop" muted="true" width="100%" playsinline disableremoteplayback><source src="'.$mp4URL.'" type="video/mp4"></video>';
+          $return = $video_element;
+      }
+
+      // Always return
+      return $return;
+  }
+
 }

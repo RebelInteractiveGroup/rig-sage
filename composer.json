@@ -43,19 +43,28 @@
       "App\\": "app/"
     }
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:rebelinteractivegroup/sage-bootstrap5-navwalker.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:rebelinteractivegroup/advanced-custom-fields-pro.git"
+    }
+  ],
   "require": {
-    "php": "^8.0",
-    "roots/acorn": "v4.2.2",
-    "log1x/acf-composer": "^v3.0.23",
-    "garrettweinberg/sage-bootstrap5-navwalker": "*"
+    "php": ">=8.1",
+    "roots/acorn": "^v3.3.1",
+    "garrettweinberg/sage-bootstrap5-navwalker": "*",
+    "log1x/acf-composer": "^2.1",
+    "rebelinteractivegroup/advanced-custom-fields-pro": "*"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "3.7.1",
-    "log1x/acf-composer": "^v3.0.23"
+    "laravel/pint": "^1.13"
   },
   "suggest": {
-    "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0).",
-    "log1x/sage-svg": "A useful SVG directive for inlining SVG's within Blade views (^1.0)."
+    "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0)."
   },
   "config": {
     "optimize-autoloader": true,
@@ -65,9 +74,6 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "scripts": {
-    "lint": [
-      "phpcs --extensions=php --standard=PSR12 app"
-    ],
     "post-autoload-dump": [
       "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
     ]
