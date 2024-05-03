@@ -17,7 +17,11 @@
       </a>
 
       @include('sections.header')
+      @include('sections.header')
 
+      <main id="main" class="main">
+        @yield('content')
+      </main>
       <main id="main" class="main">
         @yield('content')
       </main>
@@ -27,7 +31,19 @@
           @yield('sidebar')
         </aside>
       @endif
+      @hasSection('sidebar')
+        <aside class="sidebar">
+          @yield('sidebar')
+        </aside>
+      @endif
 
+      @include('sections.footer')
+    </div>
+
+    @php(do_action('get_footer'))
+    @php(wp_footer())
+  </body>
+</html>
       @include('sections.footer')
     </div>
 

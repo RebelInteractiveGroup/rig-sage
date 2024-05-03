@@ -3,10 +3,13 @@
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 2,
   "settings": {
+    "background": {
+      "backgroundImage": true
+    },
     "color": {
       "custom": false,
-      "customGradient": false,
       "customDuotone": false,
+      "customGradient": false,
       "defaultDuotone": false,
       "defaultGradients": false,
       "defaultPalette": false,
