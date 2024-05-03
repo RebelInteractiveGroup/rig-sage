@@ -7,9 +7,9 @@
 }
 
 .is-style-vertical-stack {
-  @extend .vstack;
+  @extend .d-flex, .flex-column;
 }
 
 .is-style-horizontal-stack {
-  @extend .hstack;
+  @extend .d-flex, .flex-row;
 }

@@ -8,6 +8,6 @@
   </div>
 
   <div class="footer-bottom">
-    <p>Digital Marketing by Rebel Interactive Group.</p>
+    <p>Digital Marketing by Rebellion Group.</p>
   </div>
 </footer>

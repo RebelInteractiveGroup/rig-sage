@@ -68,10 +68,29 @@ class Post extends Composer
     return get_the_title();
   }
 
+  /**
+   * categoryTitle
+   *
+   * @return void
+   */
   public function categoryTitle()
   {
     if (is_category()) {
       return single_cat_title('', false);
     }
+  }
+
+  /**
+    * Retrieve the pagination links.
+    *
+    * @return string
+    */
+  public function pagination()
+  {
+      return wp_link_pages([
+          'echo' => 0,
+          'before' => '<p>'.__('Pages:', 'sage'),
+          'after' => '</p>',
+      ]);
   }
 }
